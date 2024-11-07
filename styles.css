@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond blanche semi-transparente */
+}
+
+header {
+    background-color: #D4C4A8; /* Couleur beige */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.info {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.option {
+    background-color: #E6E8D8; /* Couleur vert clair */
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #D4E2C3;
+}
+
+h3 {
+    margin: 0;
+}
+
+footer {
+    background-color: #D4C4A8; /* Couleur beige */
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

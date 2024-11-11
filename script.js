@@ -13,6 +13,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
         alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
         return;
     }
+    const sheetBestURL = "https://api.sheetbest.com/sheets/b2db0760-b876-4582-a0b6-e9e1b6f51b9b";
 
     // Vérification de l’email avec une expression régulière
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -48,7 +48,7 @@
     <!-- JavaScript pour envoyer les données vers Google Sheets via l'API Sheet.best -->
     <script>
         // Remplacez l'URL par celle de Sheet.best obtenue après la configuration
-        const sheetBestURL = "https://api.sheetbest.com/sheets/e537a44c-0686-48a3-8d6b-ee7bc56a64ce";
+        const sheetBestURL = "https://api.sheetbest.com/sheets/b2db0760-b876-4582-a0b6-e9e1b6f51b9b";
 
         document.getElementById("orderForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Empêche l'envoi par défaut du formulaire
@@ -70,6 +70,8 @@
                 comment: comment  // Nouveau champ "comment"
             };
 
+            console.log("Données envoyées :", data);
+            
             fetch(sheetBestURL, {
                 method: 'POST',
                 headers: {

@@ -241,15 +241,51 @@ footer {
     font-style: italic;
 }
 
+/* Styles pour les écrans de taille inférieure à 768px */
 @media (max-width: 768px) {
-    .order-options {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    .option {
-        width: 100%;
-    }
+   /* Ajuster la taille du logo */
+   .logo {
+    width: 80%; /* Réduit la taille du logo */
+    height: auto;
+}
+
+/* Ajuster la barre de navigation */
+.navbar ul {
+    flex-direction: column; /* Met la navigation en colonne */
+    gap: 10px;
+    padding: 0;
+}
+
+.navbar a {
+    padding: 10px;
+    font-size: 14px; /* Réduit la taille de la police pour les liens */
+}
+
+/* Ajuster la taille du titre */
+h1 {
+    font-size: 1.8em; /* Taille plus petite pour les titres */
+    margin: 10px 0;
+}
+
+/* Ajuster les options de commande (carrés) */
+.order-options {
+    flex-direction: column; /* Passe les options de commande en colonne */
+    align-items: center;
+}
+
+.option {
+    width: 90%; /* Ajuste la largeur pour qu’elle prenne tout l’espace */
+    margin: 10px 0;
+    padding: 15px;
+}
+
+/* Ajuster la position et la taille de la flèche de retour */
+.back-arrow {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
 }
 
 

@@ -15,31 +15,49 @@ header {
     color: #333;
     text-align: center;
     padding: 20px 0;
+    
 }
-/* Styles de la barre de navigation */
-nav ul {
+
+.navbar {
+    margin-top: 10px;
+}
+
+.navbar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #D4C4A8;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
+.navbar ul li {
+    display: inline;
 }
 
-nav ul li a {
+.navbar a {
     text-decoration: none;
     color: #333;
-    padding: 10px 15px;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #555;
+.navbar a:hover {
+    background-color: #E6E8D8;
+    color: #000;
 }
+
+a {
+    color: #388E3C;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1B5E20;
+}
+
+
+
 
 /* Animation pour les boutons de commande */
 .option {
@@ -80,30 +98,62 @@ nav ul li a:hover {
 }
 
 .instagram-preview, .location {
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f9f9f9;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* style fleche retour */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #E6E8D8;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.back-arrow a:hover {
+    color: #000;
+    background-color: #D4C4A8;
+}
+
 
 /* Style de base pour les boutons */
 button {
-    background-color: #D4C4A8;
-    color: #333;
-    border: none;
+    background-color: #66BB6A;
+    color: #FFFFFF;
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #C4B89E;
+    background-color: #43A047;
 }
 
 .logo {
     width: 500px;
     height: auto;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 h1 {
@@ -112,6 +162,8 @@ h1 {
 
 main {
     padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .info {
@@ -123,21 +175,39 @@ main {
 
 .order-options {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Évite que les options se collent */
+    gap: 20px; /* Espace entre les deux options */
     margin: 20px 0;
 }
 
 .option {
-    background-color: #E6E8D8; /* Couleur vert clair */
+    background-color: #E6E8D8;
     padding: 20px;
-    width: 45%;
+    width: 50%; /* Chaque carte prend 50% de la largeur */
     text-align: center;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Empêche le contenu de dépasser les bordures */
+}
+
+.option img {
+    width: 100%; /* S'assure que l'image occupe toute la largeur disponible */
+    height: auto; /* Conserve le ratio de l'image */
+    max-height: 150px; /* Ajuste la hauteur pour éviter qu'elle soit trop grande */
+    object-fit: cover; /* Coupe l'image si elle dépasse du conteneur */
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .option:hover {
-    background-color: #D4E2C3;
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
@@ -149,7 +219,50 @@ footer {
     color: #333;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
+.location iframe {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials {
+    padding: 20px;
+    background-color: #f0f8f5;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonial {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .order-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .option {
+        width: 100%;
+    }
+}
+
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #E6E8D8;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
